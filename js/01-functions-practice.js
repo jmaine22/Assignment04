@@ -26,24 +26,29 @@ findModulus(10, 4);
 //STEP 5
 
 function maxOfThree(){
-    // let numCollect = prompt('Type the numbers to add');
-    // numCollect += numCollect;
-    let numCount;
-    numCount += numCollect;
-    numCount = parseFloat(numCount);
-    let i;
-    for(i = 0; i < arguments.length; i++) {
-        // numCount += (arguments[i]);
-        console.log(numCount);
-        numCount = eval(numCount);
-        console.log(numCount);
-    }
-    //alert(count);
-    //  do {
-    //      arguments = numCollect;
-    //      count++;
-    //      console.log(arguments[0]);
-    //  } while (count < 3);
-
+    let num = 0;
+    let total = 0;
+    do {
+       let numCollect = prompt('Type the numbers to add');
+       num++;
+       let numCount = numCollect.split(" " , );
+       let track; 
+       total += parseInt(numCount);
+       //let sum = parseInt(total);
+       console.log(track);
+       console.log(numCount);
+       console.log(total);
+       //console.log(sum);
+        // let i;
+        // for(i = 0; i < numCount.length; i++) {
+        // sum += numCount[i];
+        // console.log(numCount);
+        // console.log(sum);
+        // // numCount = eval(numCount);
+        // console.log(sum);
+        // }
+    } while (num < 3);
+    // let numCount = numCollect.split(" ",);
+    
 }
-maxOfThree(numCollect = prompt('Type the numbers to add'));
+maxOfThree();
