@@ -29,26 +29,13 @@ function maxOfThree(){
     let num = 0;
     let total = 0;
     do {
-       let numCollect = prompt('Type the numbers to add');
+       let numCollect = prompt('Type the numbers to add with space between them.');
        num++;
        let numCount = numCollect.split(" " , );
-       let track; 
-       total += parseInt(numCount);
+       total += parseInt(numCount.reduce((a, b) => parseInt(a + b)));
        //let sum = parseInt(total);
-       console.log(track);
        console.log(numCount);
        console.log(total);
-       //console.log(sum);
-        // let i;
-        // for(i = 0; i < numCount.length; i++) {
-        // sum += numCount[i];
-        // console.log(numCount);
-        // console.log(sum);
-        // // numCount = eval(numCount);
-        // console.log(sum);
-        // }
-    } while (num < 3);
-    // let numCount = numCollect.split(" ",);
-    
+    } while (num < 2);
 }
 maxOfThree();
