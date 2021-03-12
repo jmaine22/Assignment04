@@ -1,8 +1,7 @@
 let askUser = prompt("Player choose between rock, paper, scissor ");
 let userDecision = askUser;
-let randomChoice = Math.floor(Math.random() * 3);
-console.log(randomChoice);
-function computerchoice(){
+function computerChoice(){
+    let randomChoice = Math.floor(Math.random() * 3);
     for (let i = 1; i <= 3; i++){
         if (randomChoice == 0){
             let choice = "rock";
@@ -19,21 +18,56 @@ function computerchoice(){
     }
     
 }
+let choice = computerChoice();
 function game(){
         console.log(userDecision);
-        console.log(computerchoice(randomChoice));
-        if (userDecision == "rock" && randomChoice == "scissor" || 
-        userDecision == "scissor" && randomChoice == "paper" || 
-        userDecision == "paper" && randomChoice == "rock"){
-            alert("Player Wins!!" + userDecision + " beats" + randomChoice);
-        } else if (userDecision == randomChoice){
+        console.log(choice);
+        if (userDecision == "rock" && choice == "scissor" || 
+        userDecision == "scissor" && choice == "paper" || 
+        userDecision == "paper" && choice == "rock"){
+            alert("Player Wins!! " + userDecision + " beats " + choice);
+        } else if (userDecision == choice){
             alert("It's Tie");
-         } //else if (userDecision != "rock" || userDecision !="paper" || userDecision !="scissor" ){
-        //     alert("Not valid entry");
-        // }
+        } else if (userDecision != "rock" ){
+             alert("Not valid entry. Try again");
+            //  do {
+            //     askUser = prompt("Player choose between rock, paper, scissor ");
+            //     userDecision = askUser;
+            //     computerChoice();
+            //     if (userDecision == "rock" && choice == "scissor" || 
+            //     userDecision == "scissor" && choice == "paper" || 
+            //     userDecision == "paper" && choice == "rock"){
+            //     alert("Player Wins!! " + userDecision + " beats " + choice);
+            //     }
+            // } while (userDecision !="rock");
+        } else if (userDecision != "paper" ){
+            alert("Not valid entry. Try again");
+            // do {
+            //     askUser = prompt("Player choose between rock, paper, scissor ");
+            //     userDecision = askUser;
+            //     computerChoice();
+            //     if (userDecision == "rock" && choice == "scissor" || 
+            //     userDecision == "scissor" && choice == "paper" || 
+            //     userDecision == "paper" && choice == "rock"){
+            //     alert("Player Wins!! " + userDecision + " beats " + choice);
+            //     }
+            // } while (userDecision !="paper");
+        } else if (userDecision != "scissor" ){
+            alert("Not valid entry. Try again");
+            // do {
+            //     askUser = prompt("Player choose between rock, paper, scissor ");
+            //     userDecision = askUser;
+            //     computerChoice();
+            //     if (userDecision == "rock" && choice == "scissor" || 
+            //     userDecision == "scissor" && choice == "paper" || 
+            //     userDecision == "paper" && choice == "rock"){
+            //     alert("Player Wins!! " + userDecision + " beats " + choice);
+            //      }
+            // } while (userDecision !="scissor");
+        }
         else {
-            alert("Computer Wins!!" + randomChoice + " beats" + userDecision);
+            alert("Computer Wins!! " + choice + " beats " + userDecision);
         }
 
 }
-game(userDecision, computerchoice(randomChoice));
+game(userDecision, choice);
